@@ -15,7 +15,7 @@ namespace Data.EF
             builder.HasKey(x => x.OrderId);
             builder.Property(x=>x.DepartmentId).IsRequired();
             builder.Property(x => x.SubcriberName).IsRequired();
-            
+            builder.HasOne(x => x.Department).WithMany(x => x.Order).HasForeignKey(x => x.DepartmentId);
         }
     }
 }

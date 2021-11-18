@@ -15,7 +15,7 @@ namespace Data.Configuration
             builder.HasKey(x=>x.DepartmentId);
             builder.Property(x => x.Name).IsRequired();
             builder.Property(x => x.Leader).IsRequired();
-            builder.HasOne(x => x.Order).WithMany(x => x.Department).HasForeignKey(x => x.DepartmentId);
+            
         }
     }
 }

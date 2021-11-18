@@ -10,7 +10,7 @@ namespace Data.Entities
         public string Name { get; set; }
         public string Leader{ get; set; }
         public DateTime FoundedDate{ get; set; }
-        public Order Order { set; get; }
+        public List<Order> Order { set; get; }
 
     }
 }
