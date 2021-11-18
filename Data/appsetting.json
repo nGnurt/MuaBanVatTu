@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "ProjectDb": "Server=NGNURT\\TRUNGND232;Database=ProjectDb;Trusted_Connection=True"
+  }
+}
