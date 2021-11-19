@@ -19,7 +19,7 @@ namespace Data.EF
             modelBuilder.ApplyConfiguration(new OrderConfiguration());
             modelBuilder.ApplyConfiguration(new OrderDetailConfiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
-            modelBuilder.ApplyConfiguration(new PdInOrderDetailConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductOrderDetailConfiguration());
             //base.OnModelCreating(modelBuilder);
             modelBuilder.Seed();
         }
