@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Data.Configuration
 {
-    public class PdInOrderDetail 
+    public class ProductOrderDetail 
     {
         public int ProductId { get; set; }
         public Product Product { get; set; }

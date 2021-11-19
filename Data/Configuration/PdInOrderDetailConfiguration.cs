@@ -6,9 +6,9 @@ using System.Text;
 
 namespace Data.Configuration
 {
-    public class PdInOrderDetailConfiguration : IEntityTypeConfiguration<PdInOrderDetail>
+    public class PdInOrderDetailConfiguration : IEntityTypeConfiguration<ProductOrderDetail>
     {
-        public void Configure(EntityTypeBuilder<PdInOrderDetail> builder)
+        public void Configure(EntityTypeBuilder<ProductOrderDetail> builder)
         {
             builder.HasKey(x => new { x.ProductId, x.Id });
             builder.ToTable("ProductDetail");

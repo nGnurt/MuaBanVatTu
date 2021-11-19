@@ -14,6 +14,6 @@ namespace Data.Entities
         public decimal OrderPrice { get; set; }
         public int OrderQuantities { get; set; }
         public Order Order { get; set; }
-        public List<PdInOrderDetail> PdInOrderDetail { get; set; }
+        public List<ProductOrderDetail> PdInOrderDetail { get; set; }
     }
 }

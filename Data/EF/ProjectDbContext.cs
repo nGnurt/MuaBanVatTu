@@ -1,5 +1,6 @@
 ﻿using Data.Configuration;
 using Data.Entities;
+using Data.Extensions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace Data.EF
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new PdInOrderDetailConfiguration());
             //base.OnModelCreating(modelBuilder);
+            modelBuilder.Seed();
         }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Order> Orders { get; set; }
