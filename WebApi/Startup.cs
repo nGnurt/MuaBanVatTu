@@ -8,10 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Serilog;
 
 namespace WebApi
 {
@@ -32,6 +29,7 @@ namespace WebApi
             services.AddTransient<IDepartmentService, DepartmentService>();
             services.AddTransient<IOrderDetailService, OrderDetailService>();
 
+            
             services.AddControllersWithViews();
 
             services.AddSwaggerGen(c =>
@@ -52,6 +50,7 @@ namespace WebApi
                 app.UseExceptionHandler("/Home/Error");
             }
             app.UseStaticFiles();
+            app.UseSerilogRequestLogging();
 
             app.UseRouting();
 
