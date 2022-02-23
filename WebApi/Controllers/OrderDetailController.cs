@@ -1,7 +1,6 @@
 ﻿using Application.OrderDetails;
 using Application.OrderDetails.Dtos;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
@@ -13,16 +12,10 @@ namespace WebApi.Controllers
     public class OrderDetailController : ControllerBase
     {
         private readonly IOrderDetailService _orderdetailService;
-        private readonly ILogger<OrderDetailController> _logger;
-       
-        public OrderDetailController(IOrderDetailService orderdetailService)
+        private readonly ILogger<OrderDetailController> _logger;                      
+        public OrderDetailController(IOrderDetailService orderdetailService, ILogger<OrderDetailController> logger)
         {
             _orderdetailService = orderdetailService;
-        }
-
-        [ActivatorUtilitiesConstructor]
-        public OrderDetailController(ILogger<OrderDetailController> logger)
-        {
             _logger = logger;
         }
 

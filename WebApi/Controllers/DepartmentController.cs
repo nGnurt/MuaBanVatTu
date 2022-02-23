@@ -13,15 +13,10 @@ namespace WebApi.Controllers
     public class DepartmentController : ControllerBase
     {
         private readonly IDepartmentService _departmentService;
-        private readonly ILogger<DepartmentController> _logger;       
-        public DepartmentController(IDepartmentService departmentService)
+        private readonly ILogger<DepartmentController> _logger;                    
+        public DepartmentController(IDepartmentService departmentService, ILogger<DepartmentController> logger)
         {
             _departmentService = departmentService;
-        }
-
-        [ActivatorUtilitiesConstructor]
-        public DepartmentController( ILogger<DepartmentController> logger)
-        {
             _logger = logger;
         }
 
